@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Time Monitoring and Alert</title>
+    <link rel="stylesheet" href="screen-time-monitor.css"> 
+</head>
+<body>
+  <div class="app-body" id="app-body">
+    <button id="menu-btn">Menu</button>
+    <div id="menu-options" style="display: none;">
+      <ul>
+        <li><button id="custom-alerts-btn">Custom Alerts</button></li>
+        <li><button id="track-activity-btn">Track your Activity</button></li>
+        <li><button id="send-feedback-btn">Send Feedback</button></li>
+        <li><button id="how-to-guide-btn">How to Guide</button></li>
+      </ul>
+    </div>
+
+    <div id="alert-settings">
+        <h2>Custom Alerts</h2>
+        <label for="alert-interval">Alert Interval (in minutes):</label>
+        <input type="number" id="alert-interval" min="1" value="120">
+        <button id="set-alert-btn">Set Alert</button>
+        <div id="countdown" style="display: none;">Next alert in: 00:00:00</div>
+    </div>
+
+    <div id="activity-tracker" style="display: none;">
+        <h2>Track Your Activity</h2>
+        <p>Activity tracking functionality goes here.</p>
+    </div>
+    
+    <!-- Audio element for fallback method -->
+    <audio id="alert-sound" src="stomps-anthem-percussion-and-rhythm-141637.mp3" preload="auto"></audio>
+
+  </div>
+  
+  <script src="screen-time-monitor.js"></script>
+</body>
+</html>
