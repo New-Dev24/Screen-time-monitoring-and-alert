@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    animation: backgroundAnimation 10s infinite alternate;
+    background-size: 200% 200%;
+}
+
+.app-body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 2s ease-in-out;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#menu-options ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#menu-options li {
+    margin: 0;
+    padding: 8px;
+}
+
+#menu-options li button {
+    background-color: #333;
+    color: white;
+    width: 100%;
+    text-align: left;
+    border: none;
+}
+
+#menu-options li button:hover {
+    background-color: #575757;
+}
+
+#alert-settings, #activity-tracker {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#alert-settings label, #activity-tracker label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#countdown {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #d9534f; /* Bootstrap danger color for emphasis */
+    font-weight: bold;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #ff7e5f, #feb47b); }
+    100% { background: linear-gradient(135deg, #feb47b, #ff7e5f); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
